@@ -1,4 +1,4 @@
-CREATE DATABASE ado_jose;
+CREATE DATABASE view_eva;
 CREATE TABLE juntadirectiva(
     id_j SERIAL PRIMARY KEY, 
     j_nombre TEXT NOT NULL,
@@ -9,7 +9,6 @@ CREATE TABLE juntadirectiva(
 
 CREATE TABLE estudiante(
     id_e SERIAL PRIMARY KEY,
-    e_id INTEGER REFERENCES juntadirectiva(id_j),
     e_nombre TEXT NOT NULL,
     e_foto TEXT,
     e_seccion TEXT NOT NULL,
@@ -30,3 +29,21 @@ CREATE TABLE profesor(
     p_nombre TEXT NOT NULL,
     p_foto TEXT NOT NULL
 );
+
+CREATE TABLE estudiantevsformulario(
+    e_id INTEGER REFERENCES estudiante(id_e),
+    f_id INTEGER REFERENCES formulario(id_f)
+);
+
+CREATE TABLE formulario(
+    id_f SERIAL PRIMARY KEY,
+    f_id INTEGER REFERENCES juntadirectiva(id_j),
+    f_pregunta TEXT NOT NULL
+);
+
+CREATE TABLE respuesta(
+    id_r SERIAL PRIMARY KEY,
+    r_id INTEGER REFERENCES formulario(id_f),
+    r_respuesta TEXT NOT NULL
+);
+
