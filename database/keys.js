@@ -4,6 +4,6 @@ const pool = new Pool({
   post: "5432",
   user: "postgres",
   password: "Danna1120",
-  database: "ado_jose",
+  database: "adoview2",
 });
 module.exports = pool;
