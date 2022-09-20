@@ -34,6 +34,12 @@ CREATE TABLE estudiantevsformulario(
     f_id INTEGER REFERENCES formulario(id_f)
 );
 
+CREATE VIEW juntadirectivavsformulario
+AS
+    SELECT * 
+    FROM tweets JOIN (SELECT j_nombre, j_foto, j_email, id_j 
+    FROM superusuario) AS s ON f_id=id_j
+
 CREATE TABLE formulario(
     id_f SERIAL PRIMARY KEY,
     f_id INTEGER REFERENCES juntadirectiva(id_j),
