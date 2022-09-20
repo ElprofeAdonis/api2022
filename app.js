@@ -19,6 +19,9 @@ app.use(express.json());
 //wwww. esto es en el postman
 app.use(express.urlencoded({ extended: true }));
 
+//Routes
+app.use("/", require("./routes/auth.routes"));
+
 //Middlewares
 app.use(history());
 app.use(express.static(path.join(__dirname, "public")));
