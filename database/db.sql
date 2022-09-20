@@ -1,4 +1,4 @@
-CREATE DATABASE view_eva;
+CREATE DATABASE adoview2;
 CREATE TABLE juntadirectiva(
     id_j SERIAL PRIMARY KEY, 
     j_nombre TEXT NOT NULL,
@@ -11,7 +11,6 @@ CREATE TABLE estudiante(
     id_e SERIAL PRIMARY KEY,
     e_nombre TEXT NOT NULL,
     e_foto TEXT,
-    e_seccion TEXT NOT NULL,
     e_email TEXT NOT NULL UNIQUE,
     e_password TEXT NOT NULL
 );
