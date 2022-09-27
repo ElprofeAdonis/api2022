@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 //Routes
 app.use("/", require("./routes/auth.routes"));
 app.use("/juntadirectiva", require("./routes/juntarictiva.routes"));
+app.use("/estudiante", require("./routes/estudiante.routes"));
 
 //Middlewares
 app.use(history());

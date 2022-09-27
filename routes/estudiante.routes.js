@@ -3,9 +3,9 @@ import estudiante from "../controllers/estudiante";
 
 const router = express.Router();
 
-router.get("/formularios", usuario.getFormularios);
+router.get("/formularios", estudiante.getFormularios);
 
-router.post("/formulario/:id_t", usuario.joinFormulario);
+router.post("/formulario/:id_t", estudiante.joinFormulario);
 
 router.post("formulario", estudiante.createRespuesta);
 

@@ -1,3 +1,4 @@
+import { json } from "express";
 import pool from "../database/keys";
 
 const estudiante = {};
@@ -62,7 +63,7 @@ estudiante.getFormularios = async (req, res) => {
 };
 
 // muestra  la union usuarios con los comentarios
-usuario.joinTweets = async (req, res) => {
+estudiante.joinFormulario = async (req, res) => {
   const id = req.body.id;
   const id_f = req.params.id_f;
   try {
