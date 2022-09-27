@@ -72,7 +72,7 @@ estudiante.joinFormulario = async (req, res) => {
       id_f,
     ]);
     res.status(200).json({
-      message: "You joinnes the Tweets",
+      message: "You joinnes the formulario",
       tweets: { id_f },
     });
   } catch (error) {

@@ -74,7 +74,7 @@ authenticacion.singIn = async (req, res) => {
         });
       } else {
         res.status(200).json({
-          message: "La junta dirctiva fue cradoi con exito",
+          message: "La junta dirctiva fue ccreado con exito",
           NotFound: true,
         });
       }

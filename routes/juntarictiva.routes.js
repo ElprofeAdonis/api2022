@@ -28,7 +28,7 @@ router.put("/profesor/:id_p", juntadirectiva.updateProfesor);
 
 router.delete("/profesor/:id_p", juntadirectiva.deleteProfesor);
 
-//rutas del profesor
+//rutas del curso
 router.post("/curso", juntadirectiva.createCurso);
 
 router.get("/curso/:id_c", juntadirectiva.readCurso);
